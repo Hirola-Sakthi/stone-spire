@@ -2304,3 +2304,7 @@ blockquote:after {
   .btn-floating.whatsapp:hover {
 	  background-color: #1f7a12
   }
+
+  .font-size-45px{
+   font-size: 50px;
+  }
