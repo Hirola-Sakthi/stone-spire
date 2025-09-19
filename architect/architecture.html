@@ -640,7 +640,7 @@
             <!-- OUR EXPERTS SECTION START -->
 
             <!-- OUR EXPERTS SECTION END -->
-              <section class="services-1" style="background-image:url(images/background/ptn-1.png);">
+            <section class="services-1" style="background-image:url(images/background/ptn-1.png);">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center Stonespire Architects-align-center">
@@ -805,7 +805,8 @@
                         <div class="col-lg-8 mb-4 mb-lg-0">
                             <h2 class="text-light mb-0 font-size-30px">Get Incredible Interior Design Right Now!</h2>
                             <div class="space-5"></div>
-                            <p class=" mb-0 font-size-15px">At every stage, we could supervise your project – controlling all the
+                            <p class=" mb-0 font-size-15px">At every stage, we could supervise your project –
+                                controlling all the
                                 details and consulting the builders.</p>
                         </div>
                         <div class="col-lg-4 text-left text-lg-right align-self-center">
@@ -918,7 +919,7 @@
                                 <div class="col-md-4 col-sm-4">
                                     <div class="wt-icon-box-wraper p-a10 text-white m-b30">
                                         <div class="icon-content text-center">
-                                            <div class="font-40 font-weight-600 m-b5"><span class="counter">100</span>%
+                                            <div class="font-40 font-weight-600 m-b5"><span id="happyClients">0%</span>
                                             </div>
                                             <div class="wt-separator-outer m-b20">
                                                 <div class="wt-separator bg-white"></div>
@@ -930,7 +931,8 @@
                                 <div class="col-md-4 col-sm-4">
                                     <div class="wt-icon-box-wraper p-a10 text-white m-b30">
                                         <div class="icon-content text-center">
-                                            <div class="font-40 font-weight-600 m-b5"><span class="counter">30</span>+
+                                            <div class="font-40 font-weight-600 m-b5"><span
+                                                    id="finishedProjects">0</span>
                                             </div>
                                             <div class="wt-separator-outer m-b20">
                                                 <div class="wt-separator bg-white"></div>
@@ -942,7 +944,8 @@
                                 <div class="col-md-4 col-sm-4">
                                     <div class="wt-icon-box-wraper p-a10 text-white m-b30">
                                         <div class="icon-content text-center">
-                                            <div class="font-40 font-weight-600 m-b5"><span class="counter">100</span>%
+                                            <div class="font-40 font-weight-600 m-b5"><span
+                                                    id="commitmentQuality">0%</span>
                                             </div>
                                             <div class="wt-separator-outer m-b20">
                                                 <div class="wt-separator bg-white"></div>
@@ -1043,12 +1046,41 @@
     <!-- REVOLUTION SLIDER SCRIPT FILES -->
     <script src="js/rev-script-2.js"></script>
 
-    <script>
+    <!-- <script>
         $(document).ready(function () {
             $('.counter').counterUp({
                 delay: 10,
                 time: 1000
             });
+        });
+    </script> -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function incrementCounter(elementId, limit, isPercentage = false) {
+                const element = document.getElementById(elementId);
+                let startCount = 0;
+                let delay = 50; // in milliseconds
+
+                function updateCounter(startCount) {
+                    if (startCount >= limit) {
+                        element.innerHTML = isPercentage ? `${limit}%` : `${limit}+`;
+                        return;
+                    }
+
+                    setTimeout(function () {
+                        element.innerHTML = isPercentage ? `${startCount}%` : `${startCount}+`;
+                        startCount++;
+                        updateCounter(startCount);
+                    }, delay);
+                }
+
+                updateCounter(startCount);
+            }
+
+            incrementCounter("happyClients", 100, true);
+            incrementCounter("finishedProjects", 35);
+            incrementCounter("commitmentQuality", 100, true);
         });
     </script>
 

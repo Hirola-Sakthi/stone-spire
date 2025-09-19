@@ -530,6 +530,7 @@ a, a:hover {
 	justify-content: center;
 	align-items: center;
 	transition: 0.3s ease-in-out;
+	margin-left: -30px;
 }
 
 .mry-menu-button-frame .mry-menu-btn .mry-burger {
@@ -2305,6 +2306,6 @@ blockquote:after {
 	  background-color: #1f7a12
   }
 
-  .font-size-45px{
-   font-size: 50px;
+  .font-size-60px{
+   font-size: 60px;
   }

@@ -2622,7 +2622,7 @@ ol.list-num-count.list-outline-none > li:before {background-color:transparent;	c
 }
 
 @media(max-width:530px){
-	.wt-img-effect img {display: block;	margin: 0;	width: 100%;	height: 250px;	box-shadow: 0 0 0 rgba(0,0,0,0);
+	.wt-img-effect img {display: block;	margin: 0;	width: 100%;	height: auto;	box-shadow: 0 0 0 rgba(0,0,0,0);
 	-webkit-box-shadow: 0 0 0 rgba(0,0,0,0);
 	-moz-box-shadow: 0 0 0 rgba(0,0,0,0);
 	transition: all 0.25s;
@@ -4519,6 +4519,7 @@ header .logo{	display:block;	padding:4px 0;}
 .pagination-1 { 
 	padding:10px 0;
 	display: flex;
+	justify-content: center;
 }
 .pagination-1 > li{list-style: none;}
 .pagination-1 > li:first-child > a, 
@@ -4895,7 +4896,7 @@ button.scroltop {
 	border:none;
 	position: fixed;   
 	right: 15px;   
-	bottom:15px;
+	bottom:80px;
 	text-transform:uppercase;
 	margin:0; 
 	padding:0;    
